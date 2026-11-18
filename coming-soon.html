@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon | Rhythm Logic Multi Media</title>
-    <meta name="description" content="Upcoming software and creator ecosystem releases from Rhythm Logic Multi Media. Contact rhythmlogicmultimedia@gmail.com for updates and inquiries.">
+    <meta name="description" content="Upcoming software and creator ecosystem releases from Rhythm Logic Multi Media. Contact us for updates and inquiries.">
     <link rel="icon" type="image/jpeg" href="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -303,13 +303,6 @@
             <p id="project-desc" class="description">
                 This application is currently being built and prepared for public launch. Check back soon or reach out directly for early access updates and inquiries.
             </p>
-            <div class="contact-box">
-                <div class="contact-box-label">Direct Contact &amp; Release Inquiries</div>
-                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-                    <a id="contact-link" href="mailto:rhythmlogicmultimedia@gmail.com?subject=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="contact-email">rhythmlogicmultimedia@gmail.com</a>
-                    <button id="copy-email-btn" type="button" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Copy Email</button>
-                </div>
-            </div>
             <div class="cta-group">
                 <a id="email-btn" href="mailto:rhythmlogicmultimedia@gmail.com?subject=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Contact Us</a>
                 <a id="gmail-btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rhythmlogicmultimedia@gmail.com&amp;su=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open in Gmail</a>
@@ -319,7 +312,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Rhythm Logic Multi Media &middot; <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a></p>
+        <p>&copy; 2026 Rhythm Logic Multi Media &middot; <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">Contact Us</a></p>
     </footer>
 
     <script>
@@ -362,20 +355,6 @@
                 }
             };
 
-            var copyBtn = document.getElementById('copy-email-btn');
-            if (copyBtn) {
-                copyBtn.addEventListener('click', function () {
-                    if (navigator.clipboard && navigator.clipboard.writeText) {
-                        navigator.clipboard.writeText('rhythmlogicmultimedia@gmail.com').then(function () {
-                            copyBtn.textContent = 'Copied!';
-                            setTimeout(function () {
-                                copyBtn.textContent = 'Copy Email';
-                            }, 2000);
-                        });
-                    }
-                });
-            }
-
             var params = new URLSearchParams(window.location.search);
             var name = params.get('project');
             if (!name || !Object.prototype.hasOwnProperty.call(projects, name)) {
@@ -410,7 +389,6 @@
             var subject = encodeURIComponent(name + ' — Early Access & Release Inquiry');
             var mailtoUrl = 'mailto:rhythmlogicmultimedia@gmail.com?subject=' + subject;
             document.getElementById('email-btn').href = mailtoUrl;
-            document.getElementById('contact-link').href = mailtoUrl;
             document.getElementById('gmail-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=rhythmlogicmultimedia@gmail.com&su=' + subject;
         })();
     </script>

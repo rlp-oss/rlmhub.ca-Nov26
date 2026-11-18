@@ -28,7 +28,6 @@
         "@type": "Organization",
         "name": "Rhythm Logic Multi Media",
         "url": "https://rlmhub.ca/",
-        "email": "rhythmlogicmultimedia@gmail.com",
         "logo": "https://rlmhub.ca/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg",
         "sameAs": [
           "https://rhythmlogic.gumroad.com/",
@@ -462,6 +461,52 @@
             font-size: 0.9rem;
         }
 
+        .scroll-to-top {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background-color: rgba(17, 24, 39, 0.92);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 950;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .scroll-to-top:hover,
+        .scroll-to-top:focus-visible {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: #0b0f19;
+            transform: translateY(-2px);
+            outline: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-to-top {
+                transition: none;
+            }
+        }
+
         @media (max-width: 900px) {
             .gumroad-layout {
                 grid-template-columns: 1fr;
@@ -759,11 +804,10 @@
             <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.05rem; margin-bottom: 1.5rem;">
                 Rhythm Logic Multi Media represents the unified vision of independent software engineering, digital publishing, and audio production. By migrating to a streamlined, self-managed static architecture, we cut out recurring subscription bloat while maintaining absolute control over our digital footprint.
             </p>
-            <p style="color: var(--text-secondary); font-size: 1rem;">
-                Contact: <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a>
-                &nbsp;&middot;&nbsp;
-                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rhythmlogicmultimedia@gmail.com&amp;su=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
-            </p>
+            <div class="cta-group">
+                <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Contact Us</a>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rhythmlogicmultimedia@gmail.com&amp;su=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open in Gmail</a>
+            </div>
         </section>
     </div>
 
@@ -772,7 +816,7 @@
         <div class="container">
             <p>&copy; 2026 Rhythm Logic Multi Media. All rights reserved. Built for speed, performance, and zero subscription overhead.</p>
             <p style="margin-top: 0.75rem;">
-                <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a>
+                <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">Contact Us</a>
                 &nbsp;&middot;&nbsp;
                 <a href="https://rhythmlogic.gumroad.com/" target="_blank" rel="noopener">Gumroad Store</a>
                 &nbsp;&middot;&nbsp;
@@ -782,6 +826,39 @@
             </p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" type="button" class="scroll-to-top" aria-label="Scroll to top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            var scrollBtn = document.getElementById('scroll-to-top');
+            if (!scrollBtn) return;
+
+            var toggleVisibility = function () {
+                if (window.scrollY > 360) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            toggleVisibility();
+
+            scrollBtn.addEventListener('click', function () {
+                var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                window.scrollTo({
+                    top: 0,
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
