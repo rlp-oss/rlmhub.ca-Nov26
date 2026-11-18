@@ -31,6 +31,7 @@
         "email": "rhythmlogicmultimedia@gmail.com",
         "logo": "https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg",
         "sameAs": [
+          "https://rhythmlogic.gumroad.com/",
           "https://www.youtube.com/@RhythmLogicMusicProductions",
           "https://www.youtube.com/@bubblebumbooks",
           "https://www.tiktok.com/@cody.germain"
@@ -398,6 +399,60 @@
             letter-spacing: 0.04em;
         }
 
+        .gumroad-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .gumroad-modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 0.75rem;
+            list-style: none;
+            margin-bottom: 1.75rem;
+        }
+
+        .gumroad-modules li {
+            background: var(--bg-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 6px;
+            padding: 0.75rem 0.9rem;
+        }
+
+        .gumroad-modules li strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .gumroad-modules li span {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .gumroad-preview {
+            display: block;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--surface-border);
+            transition: border-color 0.2s ease, transform 0.2s ease;
+            background: #000;
+        }
+
+        .gumroad-preview:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .gumroad-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         footer {
             background-color: var(--surface-color);
             border-top: 1px solid var(--surface-border);
@@ -405,6 +460,12 @@
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .gumroad-layout {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -561,6 +622,39 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- Gumroad Storefront -->
+                <div class="card ecosystem">
+                    <div class="gumroad-layout">
+                        <div>
+                            <div class="badge-pill" style="margin-bottom: 0.75rem;">GUMROAD STOREFRONT &middot; ENTERPRISE SUITE</div>
+                            <h3>Rhythm Logic: The Operating System for Creative Business</h3>
+                            <p>All-in-one Creative Ecosystem built for solopreneurs and authors. Define your Brand DNA once and deploy across the integrated suite—available now on Gumroad (including Enterprise v25.9 &amp; RL GPS v26 Mobile).</p>
+                            <ul class="gumroad-modules">
+                                <li>
+                                    <strong>Brand Device</strong>
+                                    <span>Centralized identity manager</span>
+                                </li>
+                                <li>
+                                    <strong>GPS Publisher</strong>
+                                    <span>Professional book compilation</span>
+                                </li>
+                                <li>
+                                    <strong>Video Logic</strong>
+                                    <span>High-speed video production</span>
+                                </li>
+                                <li>
+                                    <strong>Biz Creator</strong>
+                                    <span>Marketing strategy &amp; ad gen</span>
+                                </li>
+                            </ul>
+                            <a href="https://rhythmlogic.gumroad.com/" target="_blank" rel="noopener" class="btn btn-primary">Visit Gumroad Store &rarr;</a>
+                        </div>
+                        <a href="https://rhythmlogic.gumroad.com/" target="_blank" rel="noopener" class="gumroad-preview" title="Visit Rhythm Logic on Gumroad">
+                            <img src="public/assets/aistudio/image_1a305608.png" alt="Rhythm Logic Gumroad Storefront" referrerpolicy="no-referrer">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -666,7 +760,9 @@
                 Rhythm Logic Multi Media represents the unified vision of independent software engineering, digital publishing, and audio production. By migrating to a streamlined, self-managed static architecture, we cut out recurring subscription bloat while maintaining absolute control over our digital footprint.
             </p>
             <p style="color: var(--text-secondary); font-size: 1rem;">
-                Contact: <a href="mailto:rhythmlogicmultimedia@gmail.com">rhythmlogicmultimedia@gmail.com</a>
+                Contact: <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rhythmlogicmultimedia@gmail.com&amp;su=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
             </p>
         </section>
     </div>
@@ -676,7 +772,9 @@
         <div class="container">
             <p>&copy; 2026 Rhythm Logic Multi Media. All rights reserved. Built for speed, performance, and zero subscription overhead.</p>
             <p style="margin-top: 0.75rem;">
-                <a href="mailto:rhythmlogicmultimedia@gmail.com">rhythmlogicmultimedia@gmail.com</a>
+                <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://rhythmlogic.gumroad.com/" target="_blank" rel="noopener">Gumroad Store</a>
                 &nbsp;&middot;&nbsp;
                 <a href="https://rlp-oss.github.io/rlmhub.ca-Nov26/" target="_blank" rel="noopener">rlp-oss.github.io/rlmhub.ca-Nov26</a>
                 &nbsp;&middot;&nbsp;

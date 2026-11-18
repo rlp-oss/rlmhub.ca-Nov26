@@ -305,17 +305,21 @@
             </p>
             <div class="contact-box">
                 <div class="contact-box-label">Direct Contact &amp; Release Inquiries</div>
-                <a id="contact-link" href="mailto:rhythmlogicmultimedia@gmail.com" class="contact-email">rhythmlogicmultimedia@gmail.com</a>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                    <a id="contact-link" href="mailto:rhythmlogicmultimedia@gmail.com?subject=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="contact-email">rhythmlogicmultimedia@gmail.com</a>
+                    <button id="copy-email-btn" type="button" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Copy Email</button>
+                </div>
             </div>
             <div class="cta-group">
-                <a id="email-btn" href="mailto:rhythmlogicmultimedia@gmail.com?subject=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" class="btn btn-primary">Contact Us</a>
+                <a id="email-btn" href="mailto:rhythmlogicmultimedia@gmail.com?subject=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Contact Us</a>
+                <a id="gmail-btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rhythmlogicmultimedia@gmail.com&amp;su=Release%20Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open in Gmail</a>
                 <a href="index.html#software" class="btn btn-secondary">&larr; Back to Hub</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Rhythm Logic Multi Media &middot; <a href="mailto:rhythmlogicmultimedia@gmail.com">rhythmlogicmultimedia@gmail.com</a></p>
+        <p>&copy; 2026 Rhythm Logic Multi Media &middot; <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20-%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">rhythmlogicmultimedia@gmail.com</a></p>
     </footer>
 
     <script>
@@ -358,6 +362,20 @@
                 }
             };
 
+            var copyBtn = document.getElementById('copy-email-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function () {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText('rhythmlogicmultimedia@gmail.com').then(function () {
+                            copyBtn.textContent = 'Copied!';
+                            setTimeout(function () {
+                                copyBtn.textContent = 'Copy Email';
+                            }, 2000);
+                        });
+                    }
+                });
+            }
+
             var params = new URLSearchParams(window.location.search);
             var name = params.get('project');
             if (!name || !Object.prototype.hasOwnProperty.call(projects, name)) {
@@ -390,7 +408,10 @@
             }
 
             var subject = encodeURIComponent(name + ' — Early Access & Release Inquiry');
-            document.getElementById('email-btn').href = 'mailto:rhythmlogicmultimedia@gmail.com?subject=' + subject;
+            var mailtoUrl = 'mailto:rhythmlogicmultimedia@gmail.com?subject=' + subject;
+            document.getElementById('email-btn').href = mailtoUrl;
+            document.getElementById('contact-link').href = mailtoUrl;
+            document.getElementById('gmail-btn').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=rhythmlogicmultimedia@gmail.com&su=' + subject;
         })();
     </script>
 </body>
