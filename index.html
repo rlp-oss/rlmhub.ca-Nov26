@@ -6,16 +6,17 @@
     <title>Rhythm Logic Multi Media | Software, Literature & Creative Engineering</title>
     <meta name="description" content="Official hub for Rhythm Logic Multi Media. Explore custom software, web apps, independent literature, and creator ecosystems.">
     <link rel="canonical" href="https://rlp-oss.github.io/rlmhub.ca-Nov26/">
+    <link rel="icon" type="image/jpeg" href="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rlp-oss.github.io/rlmhub.ca-Nov26/">
     <meta property="og:site_name" content="Rhythm Logic Multi Media">
     <meta property="og:title" content="Rhythm Logic Multi Media | Software, Literature &amp; Creative Engineering">
     <meta property="og:description" content="Official hub for Rhythm Logic Multi Media. Explore custom software, web apps, independent literature, and creator ecosystems.">
-    <meta property="og:image" content="https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/H.U.M.A.N._APP_LOGO_3dd539bc.jpg">
+    <meta property="og:image" content="https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rhythm Logic Multi Media | Software, Literature &amp; Creative Engineering">
     <meta name="twitter:description" content="Official hub for Rhythm Logic Multi Media. Explore custom software, web apps, independent literature, and creator ecosystems.">
-    <meta name="twitter:image" content="https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/H.U.M.A.N._APP_LOGO_3dd539bc.jpg">
+    <meta name="twitter:image" content="https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,6 +28,7 @@
         "@type": "Organization",
         "name": "Rhythm Logic Multi Media",
         "url": "https://rlp-oss.github.io/rlmhub.ca-Nov26/",
+        "logo": "https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg",
         "sameAs": [
           "https://www.youtube.com/@RhythmLogicMusicProductions",
           "https://www.youtube.com/@bubblebumbooks",
@@ -109,6 +111,17 @@
             letter-spacing: -0.025em;
             color: var(--text-primary);
             font-family: var(--font-code);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .logo span {
@@ -134,14 +147,32 @@
         hero {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
             min-height: 85vh;
             padding-top: 70px;
             position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 680px;
             padding: 4rem 0;
+        }
+
+        .hero-brand-visual {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-brand-visual img {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 1px solid var(--surface-border);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 36px rgba(239, 68, 68, 0.12);
         }
 
         .badge-pill {
@@ -363,8 +394,18 @@
             .nav-links {
                 display: none;
             }
+            hero {
+                flex-direction: column-reverse;
+                justify-content: center;
+                padding-top: 90px;
+                gap: 2rem;
+                text-align: left;
+            }
             .hero-content {
-                padding: 2rem 0;
+                padding: 1rem 0 2.5rem;
+            }
+            .hero-brand-visual img {
+                width: 220px;
             }
         }
     </style>
@@ -374,7 +415,10 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">RHYTHM LOGIC <span>MULTI MEDIA</span></div>
+            <div class="logo">
+                <img src="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg" alt="Rhythm Logic Multi Media logo" referrerpolicy="no-referrer">
+                <div>RHYTHM LOGIC <span>MULTI MEDIA</span></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#software">Software</a></li>
                 <li><a href="#books">Literature</a></li>
@@ -395,6 +439,9 @@
                     <a href="#software" class="btn btn-primary">Explore Software</a>
                     <a href="#books" class="btn btn-secondary">Browse Books</a>
                 </div>
+            </div>
+            <div class="hero-brand-visual">
+                <img src="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg" alt="Rhythm Logic Multi Media Main Logo" referrerpolicy="no-referrer">
             </div>
         </hero>
 
