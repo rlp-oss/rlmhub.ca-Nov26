@@ -452,6 +452,77 @@
             display: block;
         }
 
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .book-card {
+            padding: 1.25rem;
+        }
+
+        .book-cover-link {
+            display: block;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--surface-border);
+            margin-bottom: 1rem;
+            background-color: #0b0f19;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .book-cover-link:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .bubblebum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .bubblebum-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 8px;
+            padding: 0.75rem;
+            color: var(--text-primary);
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .bubblebum-item:hover {
+            border-color: rgba(56, 189, 248, 0.45);
+            transform: translateY(-2px);
+            color: var(--text-primary);
+        }
+
+        .bubblebum-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.65rem;
+            display: block;
+        }
+
+        .bubblebum-item span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
         footer {
             background-color: var(--surface-color);
             border-top: 1px solid var(--surface-border);
@@ -710,58 +781,100 @@
                 <p>Immersive sci-fi, dark speculative fiction, and children's adventures.</p>
             </div>
 
-            <div class="grid-3">
-                <div class="card">
+            <div class="books-grid">
+                <div class="card book-card">
                     <div>
+                        <a href="https://a.co/d/01Q5x9jr" target="_blank" rel="noopener" class="book-cover-link">
+                            <img src="public/assets/aistudio/Screenshot_20261118_141605_Chrome_37aeb001.jpg" alt="The Bluetooth Paradox book cover" class="book-cover" referrerpolicy="no-referrer">
+                        </a>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">C.W. GERMAIN &middot; KINDLE</div>
                         <h3>The Bluetooth Paradox</h3>
                         <p><em>The WildWarp Chronicles: Book 1</em> by C.W. Germain (Kindle Edition).</p>
                     </div>
                     <a href="https://a.co/d/01Q5x9jr" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">View on Amazon &rarr;</a>
                 </div>
-                <div class="card">
+                <div class="card book-card">
                     <div>
+                        <a href="https://a.co/d/0bJ2zL54" target="_blank" rel="noopener" class="book-cover-link">
+                            <img src="public/assets/aistudio/Screenshot_20261118_141641_Amazon_Shopping_b4d0e237.jpg" alt="The Quantum Corral book cover" class="book-cover" referrerpolicy="no-referrer">
+                        </a>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">C.W. GERMAIN &middot; PAPERBACK</div>
                         <h3>The Quantum Corral</h3>
                         <p><em>Book 2 in The WildWarp Chronicles</em> by C.W. Germain (Paperback).</p>
                     </div>
                     <a href="https://a.co/d/0bJ2zL54" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">View on Amazon &rarr;</a>
                 </div>
-                <div class="card">
+                <div class="card book-card">
                     <div>
+                        <a href="https://a.co/d/0aS3M5CW" target="_blank" rel="noopener" class="book-cover-link">
+                            <img src="public/assets/aistudio/Screenshot_20261118_141929_Chrome_67892344.jpg" alt="The Master Clock book cover" class="book-cover" referrerpolicy="no-referrer">
+                        </a>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">C.W. GERMAIN &middot; KINDLE</div>
                         <h3>The Master Clock</h3>
                         <p><em>The WildWarp Chronicles: Book 3</em> by C.W. Germain (Kindle Edition).</p>
                     </div>
                     <a href="https://a.co/d/0aS3M5CW" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">View on Amazon &rarr;</a>
                 </div>
-                <div class="card">
+                <div class="card book-card">
                     <div>
+                        <a href="https://a.co/d/0dv3yGP0" target="_blank" rel="noopener" class="book-cover-link">
+                            <img src="public/assets/aistudio/Screenshot_20261118_142000_Chrome_e245b85f.jpg" alt="The Dawn of Aria book cover" class="book-cover" referrerpolicy="no-referrer">
+                        </a>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">C.W. GERMAIN &middot; KINDLE</div>
                         <h3>The Dawn of Aria</h3>
                         <p><em>The Rebellion Series: Book One</em> by C.W. Germain (Kindle Edition).</p>
                     </div>
                     <a href="https://a.co/d/0dv3yGP0" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">View on Amazon &rarr;</a>
                 </div>
-                <div class="card">
+                <div class="card book-card">
                     <div>
+                        <a href="https://a.co/d/05QbpJTg" target="_blank" rel="noopener" class="book-cover-link">
+                            <img src="public/assets/aistudio/Screenshot_20261118_142038_Chrome_cd062362.jpg" alt="The Boy With Ocean Eyes book cover" class="book-cover" referrerpolicy="no-referrer">
+                        </a>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">C.W. GERMAIN &amp; AUTHOR DUVET</div>
                         <h3>The Boy With Ocean Eyes</h3>
                         <p><em>A Novella (International Collaboration Series)</em> by C.W. Germain &amp; Author Duvet (Kindle Edition).</p>
                     </div>
                     <a href="https://a.co/d/05QbpJTg" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">View on Amazon &rarr;</a>
                 </div>
-                <div class="card">
-                    <div>
-                        <div class="badge-pill" style="margin-bottom: 0.75rem;">BUBBLEBUM BOOKS</div>
-                        <h3>Captain Billy Buster</h3>
-                        <p>Children's picture books, early reader stories, and companion videos under the Bubblebum Books series.</p>
-                    </div>
+            </div>
+
+            <div class="card ecosystem" style="margin-top: 2rem;">
+                <div>
+                    <div class="badge-pill" style="margin-bottom: 0.75rem;">BUBBLEBUM BOOKS &middot; CAPTAIN BILLY BUSTER</div>
+                    <h3>Captain Billy Buster &amp; Bubblebum Books</h3>
+                    <p>Children's picture books, early reader stories, and companion videos under the Bubblebum Books series—including the five-books-in-one Storybook Collection.</p>
                     <div class="cta-group" style="gap: 0.75rem;">
-                        <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="btn btn-secondary">Amazon Books &rarr;</a>
+                        <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="btn btn-primary">Amazon Books &rarr;</a>
                         <a href="https://www.youtube.com/@bubblebumbooks" target="_blank" rel="noopener" class="btn btn-secondary">YouTube Channel</a>
                         <a href="https://youtube.com/playlist?list=PL1l3JXiM-yWu4JRmloAOmdcin2XKKUBi-&amp;si=Rs0asGM0LlUcSngy" target="_blank" rel="noopener" class="btn btn-secondary">YouTube Playlist &rarr;</a>
                     </div>
+                </div>
+                <div class="bubblebum-grid">
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142109_Chrome_7bbb30bd.jpg" alt="The Big BubbleBum Storybook Collection cover" referrerpolicy="no-referrer">
+                        <span>The Big BubbleBum Storybook Collection (5-in-1)</span>
+                    </a>
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142240_Chrome_4e92e8f1.jpg" alt="Mila Moo's Big Arrrooooo! cover" referrerpolicy="no-referrer">
+                        <span>Mila Moo's Big Arrrooooo!</span>
+                    </a>
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142335_Chrome_09ebc87c.jpg" alt="Mila Moo and Bella Boo's Busy Day cover" referrerpolicy="no-referrer">
+                        <span>Mila Moo and Bella Boo's Busy Day</span>
+                    </a>
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142306_Chrome_0db42cc4.jpg" alt="The BubbleBum Count-Up Commotion! cover" referrerpolicy="no-referrer">
+                        <span>The BubbleBum Count-Up Commotion!</span>
+                    </a>
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142217_Chrome_c6473a35.jpg" alt="When One Poop Floats cover" referrerpolicy="no-referrer">
+                        <span>When One Poop Floats</span>
+                    </a>
+                    <a href="https://a.co/d/0hginSRn" target="_blank" rel="noopener" class="bubblebum-item">
+                        <img src="public/assets/aistudio/Screenshot_20261118_142152_Chrome_277fd446.jpg" alt="Benny's Big Mountain of MINE cover" referrerpolicy="no-referrer">
+                        <span>Benny's Big Mountain of MINE</span>
+                    </a>
                 </div>
             </div>
         </section>
