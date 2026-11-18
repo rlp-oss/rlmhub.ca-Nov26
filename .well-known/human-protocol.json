@@ -1,0 +1,77 @@
+{
+  "$schema": "https://c2pa.org/specifications/v2.1/json-ld/manifest.json",
+  "protocol": "H.U.M.A.N. Protocol Specification v5.0",
+  "hubDomain": "https://rlmhub.ca",
+  "repository": "https://github.com/rlp-oss/rlmhub.ca-Nov26",
+  "publisher": {
+    "name": "Rhythm Logic Publishing",
+    "location": "Red Deer, Alberta, Canada",
+    "architect": "C.W. (Cody) Germain",
+    "isbn": "978-1-95482-104-9"
+  },
+  "complianceStandards": [
+    "Fairly Trained Standard (FT-2026)",
+    "C2PA JUMBF v2.1 Content Credentials",
+    "European Union AI Act (Articles 50 & 53 Compliance)",
+    "UNESCO 2021 Recommendation on the Ethics of Artificial Intelligence"
+  ],
+  "cleanroomFleet": [
+    {
+      "appId": "tome-crafter",
+      "code": "FT-ETHIC-TOMECRAFTER-2026",
+      "name": "Tome Crafter AI Book Studio",
+      "domain": "Literature, Books & Publications",
+      "egressControl": "Local-first vector storage, zero training data extraction"
+    },
+    {
+      "appId": "rlm-pro-studio",
+      "code": "FT-ETHIC-RLM-AUDIO-2026",
+      "name": "RLM Pro Studio",
+      "domain": "Audio DAW, Stems & Sound Design",
+      "egressControl": "Cryptographic stem lineage, sub-cent attribution routing"
+    },
+    {
+      "appId": "forge-os",
+      "code": "FT-ETHIC-FORGEOS-APPBUILDER-2026",
+      "name": "ForgeOS App Builder",
+      "domain": "Software Sandbox, AST Quarantine & Local LLM Compiler",
+      "egressControl": "AST telemetry isolation, zero copyleft leakage"
+    },
+    {
+      "appId": "rl-easy-flow",
+      "code": "FT-ETHIC-RL-EASY-FLOW-2026",
+      "name": "RL Easy Flow",
+      "domain": "Motion Design, Visual Stems & Video Automation",
+      "egressControl": "Local composition cache, zero cloud telemetry"
+    },
+    {
+      "appId": "rlmv-editor",
+      "code": "FT-ETHIC-RLMV-VIDEO-2026",
+      "name": "RLMV Music Video Editor",
+      "domain": "Music Video, Sync Frame Editing & Visual Stems",
+      "egressControl": "Frame-accurate C2PA sync, dual-creator attribution"
+    }
+  ],
+  "institutionalConsoles": {
+    "omegaConsole": "https://human-initiative-omega.ai.studio",
+    "onboardingConsole": "https://human-ethical-ai.ai.studio"
+  },
+  "economicCovenant": {
+    "splitRule": "50% People's Covenant (Gross Top-Line Enforcement)",
+    "settlementMechanism": "Sovereign Settlement Router (Non-Custodial Atomic Escrow)",
+    "societyVaults": {
+      "poolA_Creators": "70% (Direct Human Attribution)",
+      "poolB_UnregisteredEscrow": "15% (Shadow Ledger Rights Protection)",
+      "poolC_CivicLivingFloor": "15% (Community Abundance: $FOOD, $MED, $EARTH)"
+    }
+  },
+  "securityAndThreatDefense": {
+    "authentication": "Just-In-Time Ephemeral Nonces (5-Minute TTL)",
+    "antiReplay": "Single-use cryptographic nonce cache",
+    "burstVelocityTripwires": "10 requests/second threshold with automatic EigenTrust attenuation",
+    "networkSegmentation": "Strict East-West micro-isolation between UI and escrow vaults",
+    "egressGuardrails": "Kernel socket whitelisting strictly limited to local loopback (127.0.0.1:11434)"
+  },
+  "attestationEndpoint": "/.well-known/human-protocol.json",
+  "lastVerified": "2026-11-18T00:00:00Z"
+}

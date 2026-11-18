@@ -9,6 +9,7 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = '0.0.0.0';
 
+app.use('/.well-known', express.static(path.join(__dirname, '.well-known'), { dotfiles: 'allow' }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname, { index: 'index.html' }));
 
