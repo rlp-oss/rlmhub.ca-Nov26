@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Logic Multi Media | Software, Literature & Creative Engineering</title>
+    <meta name="description" content="Official hub for Rhythm Logic Multi Media. Explore custom software, web apps, independent literature, and creator ecosystems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #111827;
+            --surface-border: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --font-main: 'Inter', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #7dd3fc;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header / Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--surface-border);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+            font-family: var(--font-code);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.90rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        hero {
+            display: flex;
+            align-items: center;
+            min-height: 85vh;
+            padding-top: 70px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 4rem 0;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background-color: var(--surface-border);
+            color: var(--accent);
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.80rem;
+            font-family: var(--font-code);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #0b0f19;
+        }
+
+        .btn-primary:hover {
+            background-color: #7dd3fc;
+            color: #0b0f19;
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-color);
+            color: var(--text-primary);
+            border: 1px solid var(--surface-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-secondary);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+            border-top: 1px solid var(--surface-border);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Ecosystem Special Card */
+        .card.ecosystem {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 1) 0%, rgba(15, 23, 42, 1) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .ecosystem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            list-style: none;
+        }
+
+        .ecosystem-list li {
+            background: var(--bg-color);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--surface-border);
+            font-size: 0.9rem;
+        }
+
+        .ecosystem-list li strong {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .ecosystem-list li span {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--surface-color);
+            border-top: 1px solid var(--surface-border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">RHYTHM LOGIC <span>MULTI MEDIA</span></div>
+            <ul class="nav-links">
+                <li><a href="#software">Software</a></li>
+                <li><a href="#books">Literature</a></li>
+                <li><a href="#audio">Audio & Media</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <hero>
+            <div class="hero-content">
+                <div class="badge-pill">// INDEPENDENT DIGITAL ECOSYSTEM</div>
+                <h1>Innovation, Code, and <span>Creative Execution</span>.</h1>
+                <p class="hero-desc">Welcome to Rhythm Logic Multi Media. Consolidating custom software development, automated web apps, independent publishing, and professional audio engineering into one high-performance hub.</p>
+                <div class="cta-group">
+                    <a href="#software" class="btn btn-primary">Explore Software</a>
+                    <a href="#books" class="btn btn-secondary">Browse Books</a>
+                </div>
+            </div>
+        </hero>
+
+        <!-- Software Section -->
+        <section id="software">
+            <div class="section-header">
+                <h2>Software & Web Applications</h2>
+                <p>High-performance web apps, automation utilities, and modular developer tools.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- CrowdPilot -->
+                <div class="card">
+                    <div>
+                        <h3>CrowdPilot</h3>
+                        <p>An automated web application built for live DJing, karaoke hosting, intelligent request management, and interactive crowd trivia.</p>
+                    </div>
+                    <a href="#" class="btn btn-secondary" style="align-self: flex-start;">Launch CrowdPilot</a>
+                </div>
+
+                <!-- Community Parcel Hub -->
+                <div class="card">
+                    <div>
+                        <h3>Community Parcel Hub</h3>
+                        <p>Streamlined regional package scanning and logistics management system designed for community courier integration.</p>
+                    </div>
+                    <a href="#" class="btn btn-secondary" style="align-self: flex-start;">View Details</a>
+                </div>
+
+                <!-- H.U.M.A.N. Initiative Ecosystem -->
+                <div class="card ecosystem">
+                    <div>
+                        <div class="badge-pill" style="margin-bottom: 0.75rem;">THE H.U.M.A.N. INITIATIVE PROTOCOL</div>
+                        <h3>Ecosystem Roadmap & Tooling</h3>
+                        <p>An integrated suite of creator and developer tools anchored by micro-royalty standards:</p>
+                    </div>
+                    <ul class="ecosystem-list">
+                        <li>
+                            <strong>ForgeOS</strong>
+                            <span>Open-source app builder</span>
+                        </li>
+                        <li>
+                            <strong>RLM Pro Studio</strong>
+                            <span>Advanced audio production</span>
+                        </li>
+                        <li>
+                            <strong>TomeCrafter</strong>
+                            <span>Digital publishing tools</span>
+                        </li>
+                        <li>
+                            <strong>RLMV Editor</strong>
+                            <span>Music video production</span>
+                        </li>
+                        <li>
+                            <strong>RL Easy Flow</strong>
+                            <span>Workflow automation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section id="books">
+            <div class="section-header">
+                <h2>Literature & Publishing</h2>
+                <p>Immersive sci-fi, dark speculative fiction, and children's adventures.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>C.W. Germain</h3>
+                    <p>Sci-fi and adult fiction author, including <em>The Bluetooth Paradox</em> (WildWarp Chronicles Book 1).</p>
+                    <a href="https://amazon.com" target="_blank" rel="noopener">Author Profile &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Captain Billy Buster</h3>
+                    <p>Children's picture books and early reader stories under the Bubblebum Books brand.</p>
+                    <a href="https://bubblebumbooks.com" target="_blank" rel="noopener">Visit Bubblebum Books &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Wade Cody</h3>
+                    <p>Literary works and acclaimed collaborative novellas, including <em>The Boy With Ocean Eyes</em>.</p>
+                    <a href="https://amazon.com" target="_blank" rel="noopener">View Works &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio & Media Section -->
+        <section id="audio">
+            <div class="section-header">
+                <h2>Audio Engineering & Production</h2>
+                <p>Original sound design, mixing, and digital mastering.</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, var(--surface-color) 0%, #162032 100%);">
+                <h3>Rhythm Logic Media YouTube Channel</h3>
+                <p>Rhythm Logic Music Productions has evolved. Original tracks (ranging from thrash metal works by <em>The A Sharps</em> to acoustic and synth productions) now serve as live engineering demonstrations and audio portfolio pieces, hosted directly on YouTube.</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary">Visit YouTube Channel</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" style="margin-bottom: 4rem;">
+            <div class="section-header">
+                <h2>About the Hub</h2>
+                <p>Built from the ground up for total ownership.</p>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.05rem;">
+                Rhythm Logic Multi Media represents the unified vision of independent software engineering, digital publishing, and audio production. By migrating to a streamlined, self-managed static architecture, we cut out recurring subscription bloat while maintaining absolute control over our digital footprint.
+            </p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rhythm Logic Multi Media. All rights reserved. Built for speed, performance, and zero subscription overhead.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
