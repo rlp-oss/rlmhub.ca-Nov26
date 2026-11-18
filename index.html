@@ -254,7 +254,7 @@
 
         .ecosystem-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
             list-style: none;
@@ -262,21 +262,62 @@
 
         .ecosystem-list li {
             background: var(--bg-color);
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
+            padding: 0.9rem 1rem;
+            border-radius: 8px;
             border: 1px solid var(--surface-border);
             font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
         }
 
         .ecosystem-list li strong {
             display: block;
             color: var(--text-primary);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
 
         .ecosystem-list li span {
             color: var(--text-secondary);
             font-size: 0.8rem;
+        }
+
+        .app-logo-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-logo-header h3 {
+            margin-bottom: 0;
+        }
+
+        .app-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            background-color: #0b0f19;
+            flex-shrink: 0;
+        }
+
+        .app-logo-placeholder {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            border: 1px solid rgba(74, 222, 128, 0.35);
+            background: radial-gradient(circle at center, rgba(74, 222, 128, 0.16) 0%, #0b0f19 75%);
+            color: #6ee7b7;
+            font-family: var(--font-code);
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            letter-spacing: 0.04em;
         }
 
         footer {
@@ -338,7 +379,10 @@
                 <!-- CrowdPilot -->
                 <div class="card">
                     <div>
-                        <h3>CrowdPilot</h3>
+                        <div class="app-logo-header">
+                            <img src="/assets/aistudio/CrowdPilot_Logo_55b1d531.PNG" alt="CrowdPilot logo" class="app-logo" referrerpolicy="no-referrer">
+                            <h3>CrowdPilot</h3>
+                        </div>
                         <p>An automated web application built for live DJing, karaoke hosting, intelligent request management, and interactive crowd trivia.</p>
                     </div>
                     <a href="#" class="btn btn-secondary" style="align-self: flex-start;">Launch CrowdPilot</a>
@@ -347,7 +391,10 @@
                 <!-- Community Parcel Hub -->
                 <div class="card">
                     <div>
-                        <h3>Community Parcel Hub</h3>
+                        <div class="app-logo-header">
+                            <img src="/assets/aistudio/CPH_LOGO_eae89884.png" alt="Community Parcel Hub logo" class="app-logo" referrerpolicy="no-referrer">
+                            <h3>Community Parcel Hub</h3>
+                        </div>
                         <p>Streamlined regional package scanning and logistics management system designed for community courier integration.</p>
                     </div>
                     <a href="https://community-parcel-hub.ai.studio" target="_blank" rel="noopener" class="btn btn-secondary" style="align-self: flex-start;">Launch Parcel Hub</a>
@@ -357,29 +404,54 @@
                 <div class="card ecosystem">
                     <div>
                         <div class="badge-pill" style="margin-bottom: 0.75rem;">THE H.U.M.A.N. INITIATIVE PROTOCOL</div>
-                        <h3>Ecosystem Roadmap & Tooling</h3>
+                        <div class="app-logo-header">
+                            <img src="/assets/aistudio/H.U.M.A.N._APP_LOGO_3dd539bc.jpg" alt="H.U.M.A.N. App logo" class="app-logo" referrerpolicy="no-referrer">
+                            <h3>Ecosystem Roadmap &amp; Tooling</h3>
+                        </div>
                         <p>An integrated suite of creator and developer tools anchored by micro-royalty standards:</p>
                     </div>
                     <ul class="ecosystem-list">
                         <li>
-                            <strong>ForgeOS</strong>
-                            <span>Open-source app builder</span>
+                            <img src="/assets/aistudio/Human_Omega_logo_67d0f2f0.png" alt="Human Omega logo" class="app-logo" referrerpolicy="no-referrer">
+                            <div>
+                                <strong>Human Omega</strong>
+                                <span>Protocol core &amp; identity</span>
+                            </div>
                         </li>
                         <li>
-                            <strong>RLM Pro Studio</strong>
-                            <span>Advanced audio production</span>
+                            <img src="/assets/aistudio/FORGEOS_APP_LOGO_47639320.png" alt="ForgeOS logo" class="app-logo" referrerpolicy="no-referrer">
+                            <div>
+                                <strong>ForgeOS</strong>
+                                <span>Open-source app builder</span>
+                            </div>
                         </li>
                         <li>
-                            <strong>TomeCrafter</strong>
-                            <span>Digital publishing tools</span>
+                            <div class="app-logo-placeholder" aria-hidden="true">RLM</div>
+                            <div>
+                                <strong>RLM Pro Studio</strong>
+                                <span>Advanced audio production</span>
+                            </div>
                         </li>
                         <li>
-                            <strong>RLMV Editor</strong>
-                            <span>Music video production</span>
+                            <img src="/assets/aistudio/TOME_CRAFTER_APP_LOGO_a12c5de3.png" alt="TomeCrafter logo" class="app-logo" referrerpolicy="no-referrer">
+                            <div>
+                                <strong>TomeCrafter</strong>
+                                <span>Digital publishing tools</span>
+                            </div>
                         </li>
                         <li>
-                            <strong>RL Easy Flow</strong>
-                            <span>Workflow automation</span>
+                            <img src="/src/assets/images/rlmv_editor_logo_1794977948146.jpg" alt="RLMV Editor logo" class="app-logo" referrerpolicy="no-referrer">
+                            <div>
+                                <strong>RLMV Editor</strong>
+                                <span>Music video production</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/assets/aistudio/RL_EASY_FLOW_APP_LOGO_a9f4fe3d.png" alt="RL Easy Flow logo" class="app-logo" referrerpolicy="no-referrer">
+                            <div>
+                                <strong>RL Easy Flow</strong>
+                                <span>Workflow automation</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
