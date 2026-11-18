@@ -28,6 +28,7 @@
         "@type": "Organization",
         "name": "Rhythm Logic Multi Media",
         "url": "https://rlp-oss.github.io/rlmhub.ca-Nov26/",
+        "email": "rhythmlogicmultimedia@gmail.com",
         "logo": "https://rlp-oss.github.io/rlmhub.ca-Nov26/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg",
         "sameAs": [
           "https://www.youtube.com/@RhythmLogicMusicProductions",
@@ -323,13 +324,29 @@
 
         .ecosystem-list li {
             background: var(--bg-color);
-            padding: 0.9rem 1rem;
             border-radius: 8px;
             border: 1px solid var(--surface-border);
             font-size: 0.9rem;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .ecosystem-list li:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .ecosystem-link {
             display: flex;
             align-items: center;
             gap: 0.9rem;
+            padding: 0.9rem 1rem;
+            color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ecosystem-link:hover {
+            color: inherit;
         }
 
         .ecosystem-list li strong {
@@ -462,7 +479,7 @@
                         </div>
                         <p>An automated web application built for live DJing, karaoke hosting, intelligent request management, and interactive crowd trivia.</p>
                     </div>
-                    <a href="#" class="btn btn-secondary" style="align-self: flex-start;">Launch CrowdPilot</a>
+                    <a href="coming-soon.html?project=CrowdPilot" class="btn btn-secondary" style="align-self: flex-start;">Launch CrowdPilot</a>
                 </div>
 
                 <!-- Community Parcel Hub -->
@@ -489,46 +506,58 @@
                     </div>
                     <ul class="ecosystem-list">
                         <li>
-                            <img src="public/assets/aistudio/Human_Omega_logo_67d0f2f0.png" alt="Human Omega logo" class="app-logo" referrerpolicy="no-referrer">
-                            <div>
-                                <strong>Human Omega</strong>
-                                <span>Protocol core &amp; identity</span>
-                            </div>
+                            <a href="coming-soon.html?project=Human%20Omega" class="ecosystem-link">
+                                <img src="public/assets/aistudio/Human_Omega_logo_67d0f2f0.png" alt="Human Omega logo" class="app-logo" referrerpolicy="no-referrer">
+                                <div>
+                                    <strong>Human Omega</strong>
+                                    <span>Protocol core &amp; identity</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <img src="public/assets/aistudio/FORGEOS_APP_LOGO_47639320.png" alt="ForgeOS logo" class="app-logo" referrerpolicy="no-referrer">
-                            <div>
-                                <strong>ForgeOS</strong>
-                                <span>Open-source app builder</span>
-                            </div>
+                            <a href="coming-soon.html?project=ForgeOS" class="ecosystem-link">
+                                <img src="public/assets/aistudio/FORGEOS_APP_LOGO_47639320.png" alt="ForgeOS logo" class="app-logo" referrerpolicy="no-referrer">
+                                <div>
+                                    <strong>ForgeOS</strong>
+                                    <span>Open-source app builder</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <div class="app-logo-placeholder" aria-hidden="true">RLM</div>
-                            <div>
-                                <strong>RLM Pro Studio</strong>
-                                <span>Advanced audio production</span>
-                            </div>
+                            <a href="coming-soon.html?project=RLM%20Pro%20Studio" class="ecosystem-link">
+                                <div class="app-logo-placeholder" aria-hidden="true">RLM</div>
+                                <div>
+                                    <strong>RLM Pro Studio</strong>
+                                    <span>Advanced audio production</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <img src="public/assets/aistudio/TOME_CRAFTER_APP_LOGO_a12c5de3.png" alt="TomeCrafter logo" class="app-logo" referrerpolicy="no-referrer">
-                            <div>
-                                <strong>TomeCrafter</strong>
-                                <span>Digital publishing tools</span>
-                            </div>
+                            <a href="coming-soon.html?project=TomeCrafter" class="ecosystem-link">
+                                <img src="public/assets/aistudio/TOME_CRAFTER_APP_LOGO_a12c5de3.png" alt="TomeCrafter logo" class="app-logo" referrerpolicy="no-referrer">
+                                <div>
+                                    <strong>TomeCrafter</strong>
+                                    <span>Digital publishing tools</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <img src="src/assets/images/rlmv_editor_logo_1794977948146.jpg" alt="RLMV Editor logo" class="app-logo" referrerpolicy="no-referrer">
-                            <div>
-                                <strong>RLMV Editor</strong>
-                                <span>Music video production</span>
-                            </div>
+                            <a href="coming-soon.html?project=RLMV%20Editor" class="ecosystem-link">
+                                <img src="src/assets/images/rlmv_editor_logo_1794977948146.jpg" alt="RLMV Editor logo" class="app-logo" referrerpolicy="no-referrer">
+                                <div>
+                                    <strong>RLMV Editor</strong>
+                                    <span>Music video production</span>
+                                </div>
+                            </a>
                         </li>
                         <li>
-                            <img src="public/assets/aistudio/RL_EASY_FLOW_APP_LOGO_a9f4fe3d.png" alt="RL Easy Flow logo" class="app-logo" referrerpolicy="no-referrer">
-                            <div>
-                                <strong>RL Easy Flow</strong>
-                                <span>Workflow automation</span>
-                            </div>
+                            <a href="coming-soon.html?project=RL%20Easy%20Flow" class="ecosystem-link">
+                                <img src="public/assets/aistudio/RL_EASY_FLOW_APP_LOGO_a9f4fe3d.png" alt="RL Easy Flow logo" class="app-logo" referrerpolicy="no-referrer">
+                                <div>
+                                    <strong>RL Easy Flow</strong>
+                                    <span>Workflow automation</span>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -633,8 +662,11 @@
                 <h2>About the Hub</h2>
                 <p>Built from the ground up for total ownership.</p>
             </div>
-            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.05rem;">
+            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.05rem; margin-bottom: 1.5rem;">
                 Rhythm Logic Multi Media represents the unified vision of independent software engineering, digital publishing, and audio production. By migrating to a streamlined, self-managed static architecture, we cut out recurring subscription bloat while maintaining absolute control over our digital footprint.
+            </p>
+            <p style="color: var(--text-secondary); font-size: 1rem;">
+                Contact: <a href="mailto:rhythmlogicmultimedia@gmail.com">rhythmlogicmultimedia@gmail.com</a>
             </p>
         </section>
     </div>
@@ -644,6 +676,8 @@
         <div class="container">
             <p>&copy; 2026 Rhythm Logic Multi Media. All rights reserved. Built for speed, performance, and zero subscription overhead.</p>
             <p style="margin-top: 0.75rem;">
+                <a href="mailto:rhythmlogicmultimedia@gmail.com">rhythmlogicmultimedia@gmail.com</a>
+                &nbsp;&middot;&nbsp;
                 <a href="https://rlp-oss.github.io/rlmhub.ca-Nov26/" target="_blank" rel="noopener">rlp-oss.github.io/rlmhub.ca-Nov26</a>
                 &nbsp;&middot;&nbsp;
                 <a href="https://www.tiktok.com/@cody.germain" target="_blank" rel="noopener">TikTok (@cody.germain)</a>
