@@ -30,6 +30,7 @@
         "url": "https://rlmhub.ca/",
         "logo": "https://rlmhub.ca/public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg",
         "sameAs": [
+          "https://substack.com/@cwgermain",
           "https://rhythmlogic.gumroad.com/",
           "https://www.youtube.com/@RhythmLogicMusicProductions",
           "https://www.youtube.com/@bubblebumbooks",
@@ -523,6 +524,230 @@
             line-height: 1.35;
         }
 
+        .substack-window {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 1) 0%, rgba(15, 23, 42, 1) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .substack-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 1rem 1.5rem;
+            background-color: rgba(11, 15, 25, 0.85);
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        .substack-toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .substack-handle {
+            font-family: var(--font-code);
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .substack-filters {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .substack-filter-btn {
+            background: var(--surface-color);
+            color: var(--text-secondary);
+            border: 1px solid var(--surface-border);
+            border-radius: 6px;
+            padding: 0.35rem 0.75rem;
+            font-family: var(--font-code);
+            font-size: 0.76rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .substack-filter-btn:hover {
+            color: var(--text-primary);
+            border-color: rgba(56, 189, 248, 0.45);
+        }
+
+        .substack-filter-btn.active {
+            background: var(--accent);
+            color: #0b0f19;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .substack-body {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            min-height: 460px;
+        }
+
+        .substack-list {
+            border-right: 1px solid var(--surface-border);
+            background-color: rgba(11, 15, 25, 0.55);
+            max-height: 520px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .substack-item {
+            width: 100%;
+            text-align: left;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--surface-border);
+            border-left: 3px solid transparent;
+            padding: 1rem 1.25rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: background-color 0.15s ease, border-color 0.15s ease;
+            font-family: var(--font-main);
+        }
+
+        .substack-item:hover {
+            background-color: rgba(56, 189, 248, 0.06);
+        }
+
+        .substack-item.active {
+            background-color: rgba(56, 189, 248, 0.12);
+            border-left-color: var(--accent);
+        }
+
+        .substack-item-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-code);
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.35rem;
+        }
+
+        .substack-item-tag {
+            color: var(--accent);
+        }
+
+        .substack-item-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            line-height: 1.35;
+            color: var(--text-primary);
+        }
+
+        .substack-reader {
+            padding: 2rem 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .substack-reader-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .substack-reader-date {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .substack-reader h3 {
+            font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .substack-reader-subtitle {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .substack-reader-summary {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .substack-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            padding: 1.1rem 1.25rem;
+            background-color: rgba(11, 15, 25, 0.7);
+            border: 1px solid var(--surface-border);
+            border-radius: 8px;
+        }
+
+        .substack-highlights li {
+            position: relative;
+            padding-left: 1.15rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .substack-highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: var(--font-code);
+        }
+
+        .substack-reader-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--surface-border);
+        }
+
+        .substack-pager {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .substack-pager .btn {
+            padding: 0.55rem 0.95rem;
+            font-size: 0.85rem;
+        }
+
+        .substack-counter {
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin: 0 0.35rem;
+        }
+
         footer {
             background-color: var(--surface-color);
             border-top: 1px solid var(--surface-border);
@@ -582,6 +807,17 @@
             .gumroad-layout {
                 grid-template-columns: 1fr;
             }
+            .substack-body {
+                grid-template-columns: 1fr;
+            }
+            .substack-list {
+                border-right: none;
+                border-bottom: 1px solid var(--surface-border);
+                max-height: 260px;
+            }
+            .substack-reader {
+                padding: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -616,6 +852,7 @@
             <ul class="nav-links">
                 <li><a href="#software">Software</a></li>
                 <li><a href="#books">Literature</a></li>
+                <li><a href="#substack">Substack</a></li>
                 <li><a href="#audio">Audio & Media</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -879,6 +1116,65 @@
             </div>
         </section>
 
+        <!-- Substack Essays & Dispatches Section -->
+        <section id="substack">
+            <div class="section-header" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+                <div>
+                    <h2>Substack &amp; Technical Essays</h2>
+                    <p>Long-form dispatches by C.W. Germain on ethical AI architecture, cybersecurity defense, and next-generation computing.</p>
+                </div>
+                <div class="cta-group">
+                    <a href="https://substack.com/@cwgermain" target="_blank" rel="noopener" class="btn btn-primary">Visit Substack (@cwgermain) &rarr;</a>
+                    <a href="https://cwgermain.substack.com/subscribe" target="_blank" rel="noopener" class="btn btn-secondary">Subscribe Free</a>
+                </div>
+            </div>
+
+            <div class="substack-window" aria-label="C.W. Germain Substack Article Summaries">
+                <div class="substack-toolbar">
+                    <div class="substack-toolbar-left">
+                        <span class="substack-handle">// SUBSTACK.COM/@CWGERMAIN</span>
+                    </div>
+                    <div class="substack-filters" role="tablist" aria-label="Filter articles by topic">
+                        <button type="button" class="substack-filter-btn active" data-category="All" role="tab" aria-selected="true">All (10)</button>
+                        <button type="button" class="substack-filter-btn" data-category="H.U.M.A.N. Protocol" role="tab" aria-selected="false">H.U.M.A.N. Protocol (6)</button>
+                        <button type="button" class="substack-filter-btn" data-category="Cybersecurity" role="tab" aria-selected="false">Cybersecurity (2)</button>
+                        <button type="button" class="substack-filter-btn" data-category="Computing" role="tab" aria-selected="false">Computing (2)</button>
+                    </div>
+                </div>
+
+                <div class="substack-body">
+                    <div id="substack-list" class="substack-list" role="listbox" aria-label="Published Substack articles"></div>
+                    <div class="substack-reader" aria-live="polite">
+                        <div>
+                            <div class="substack-reader-meta">
+                                <span id="substack-reader-tag" class="badge-pill" style="margin-bottom: 0;">CYBERSECURITY</span>
+                                <span id="substack-reader-date" class="substack-reader-date">Nov 18, 2026</span>
+                            </div>
+                            <h3 id="substack-reader-title">Fighting Fire with Fire</h3>
+                            <p id="substack-reader-subtitle" class="substack-reader-subtitle">How AI-Powered Defense Is Turning the Tide in Today’s Cyber Wars</p>
+                            <p id="substack-reader-summary" class="substack-reader-summary">Examines how supply-chain compromises and state-backed intrusions exposed fragile trust assumptions in modern software—and why defenders are now matching machine-speed attacks with AI-driven detection, zero-trust architecture, and automated containment.</p>
+                            <ul id="substack-reader-highlights" class="substack-highlights">
+                                <li>Breaks down how AI-driven defense platforms cut breach detection windows and raise detection accuracy.</li>
+                                <li>Highlights zero-trust verification and automated containment as core counters to cascading supply-chain compromises.</li>
+                                <li>Frames modern cybersecurity as a shift from human-speed reaction to machine-speed resilience.</li>
+                            </ul>
+                        </div>
+                        <div class="substack-reader-actions">
+                            <div class="cta-group" style="gap: 0.75rem;">
+                                <a id="substack-read-btn" href="https://cwgermain.substack.com/p/fighting-fire-with-fire" target="_blank" rel="noopener" class="btn btn-primary">Read Full Article &rarr;</a>
+                                <a href="https://substack.com/@cwgermain" target="_blank" rel="noopener" class="btn btn-secondary">All Posts</a>
+                            </div>
+                            <div class="substack-pager">
+                                <button id="substack-prev-btn" type="button" class="btn btn-secondary" aria-label="Previous article">&larr; Prev</button>
+                                <span id="substack-counter" class="substack-counter">1 / 10</span>
+                                <button id="substack-next-btn" type="button" class="btn btn-secondary" aria-label="Next article">Next &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Audio & Media Section -->
         <section id="audio">
             <div class="section-header">
@@ -930,6 +1226,8 @@
             <p style="margin-top: 0.75rem;">
                 <a href="mailto:rhythmlogicmultimedia@gmail.com?subject=Inquiry%20%E2%80%94%20Rhythm%20Logic%20Multi%20Media" target="_blank" rel="noopener noreferrer">Contact Us</a>
                 &nbsp;&middot;&nbsp;
+                <a href="https://substack.com/@cwgermain" target="_blank" rel="noopener">Substack (@cwgermain)</a>
+                &nbsp;&middot;&nbsp;
                 <a href="https://rhythmlogic.gumroad.com/" target="_blank" rel="noopener">Gumroad Store</a>
                 &nbsp;&middot;&nbsp;
                 <a href="https://rlmhub.ca/" target="_blank" rel="noopener">rlmhub.ca</a>
@@ -969,6 +1267,260 @@
                     behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
             });
+        })();
+
+        (function () {
+            var articles = [
+                {
+                    title: 'Fighting Fire with Fire',
+                    subtitle: 'How AI-Powered Defense Is Turning the Tide in Today’s Cyber Wars',
+                    category: 'Cybersecurity',
+                    date: 'Nov 18, 2026',
+                    url: 'https://cwgermain.substack.com/p/fighting-fire-with-fire',
+                    summary: 'Examines how supply-chain compromises and state-backed intrusions exposed fragile trust assumptions in modern software—and why defenders are now matching machine-speed attacks with AI-driven detection, zero-trust architecture, and automated containment.',
+                    highlights: [
+                        'Breaks down how AI-driven defense platforms accelerate threat detection and cut breach response windows.',
+                        'Highlights zero-trust verification and automated containment as counters to cascading vendor compromises.',
+                        'Frames modern cybersecurity as a shift from human-speed reaction to machine-speed resilience.'
+                    ]
+                },
+                {
+                    title: 'The Geometry of Intelligence',
+                    subtitle: 'Why the Future of Computing Looks Like Sacred Architecture',
+                    category: 'Computing',
+                    date: 'Nov 16, 2026',
+                    url: 'https://cwgermain.substack.com/p/the-geometry-of-intelligence',
+                    summary: 'Challenges the two-dimensional silicon grid paradigm of modern processors, exploring how Platonic-solid geometry, synthetic diamond substrates, quantum storage, and neuromorphic nodes point toward ultra-efficient, near-zero-heat computing cores.',
+                    highlights: [
+                        'Critiques the thermal and electrical waste of monolithic, flat 2D processor layouts.',
+                        'Explores geometric computing lattices inspired by Platonic solids to shorten signal paths.',
+                        'Connects neuromorphic event-driven nodes and synthetic diamond storage to a low-power computing blueprint.'
+                    ]
+                },
+                {
+                    title: 'The Tri Force Chip Architecture',
+                    subtitle: 'How Modular Design and Synthetic Diamonds Are Rewriting the Physics of Computing',
+                    category: 'Computing',
+                    date: 'Nov 16, 2026',
+                    url: 'https://cwgermain.substack.com/p/the-tri-force-chip-architecture',
+                    summary: 'Proposes unifying CPU, memory, and storage inside a modular, point-to-point chip lattice—modeled conceptually like a central triad flanked by memory and storage blocks—paired with synthetic diamond materials to overcome copper-highway bottlenecks.',
+                    highlights: [
+                        'Explains why monolithic silicon slabs hit thermal and interconnect walls at scale.',
+                        'Maps out a modular triad topology linking compute, memory, and storage via direct point-to-point paths.',
+                        'Examines how synthetic diamond quantum storage and chiplet packaging reshape hardware efficiency.'
+                    ]
+                },
+                {
+                    title: 'The Autonomous Threat',
+                    subtitle: 'How AI Pentesting Tools Work and How to Hard-Block Them',
+                    category: 'Cybersecurity',
+                    date: 'Nov 16, 2026',
+                    url: 'https://cwgermain.substack.com/p/the-autonomous-threat',
+                    summary: 'Analyzes the shift from human-paced hacking to autonomous agentic red-teaming frameworks like ARTEX that compress recon, exploitation, credential harvesting, and exfiltration from days to minutes—and details concrete defenses to hard-block them.',
+                    highlights: [
+                        'Explains the end-to-end automated attack chain executed by agentic AI pentesting consoles.',
+                        'Identifies why legacy static perimeter rules fail against machine-speed reconnaissance.',
+                        'Provides actionable hardening strategies, velocity tripwires, and isolation controls to block autonomous agents.'
+                    ]
+                },
+                {
+                    title: 'Artificial Winter: How the Scarcity Operating System Colonized the Human Prefrontal Cortex',
+                    subtitle: 'The Frost on the Glass vs. The Panic at 3:15 a.m.',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 13, 2026',
+                    url: 'https://cwgermain.substack.com/p/artificial-winter-how-the-scarcity',
+                    summary: 'Contrasts genuine thermodynamic cold at -35°C in Red Deer, Alberta with manufactured economic anxiety—arguing that modern systems mistake engineered scarcity for natural law and trap human cognition in chronic survival panic.',
+                    highlights: [
+                        'Distinguishes honest physical/thermodynamic limits from artificially engineered economic scarcity.',
+                        'Explains how persistent financial survival stress taxes executive function in the prefrontal cortex.',
+                        'Introduces the opening thesis of The H.U.M.A.N. Initiative on dismantling chronic survival mode.'
+                    ]
+                },
+                {
+                    title: 'A Note From the Architect',
+                    subtitle: 'Ground Truth, Lived Reality, and the Simulated Horizon',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 11, 2026',
+                    url: 'https://cwgermain.substack.com/p/a-note-from-the-architect',
+                    summary: 'A personal origin essay recounting how The H.U.M.A.N. Initiative was forged between 2019 and 2026—built independently from a kitchen table and parked car between delivery runs in response to the survival shock of the 2020 pandemic.',
+                    highlights: [
+                        'Chronicles seven years of independent self-education, coding, and systems architecture outside VC incubators.',
+                        'Grounds the H.U.M.A.N. framework in real-world economic fragility witnessed during global shutdowns.',
+                        'Articulates why ethical AI architecture must be built from lived ground truth rather than abstract theory.'
+                    ]
+                },
+                {
+                    title: 'THE H.U.M.A.N. INITIATIVE — A Roadmap to Ethical AI Evolution',
+                    subtitle: 'Act I, Chapter 1: The Scarcity Operating System — Anatomy of Chronic Survival Mode',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 11, 2026',
+                    url: 'https://cwgermain.substack.com/p/the-human-initiative-a-roadmap-to',
+                    summary: 'The opening chapter preview of the book, setting the scene inside a bare-metal Red Deer workshop during mid-January winter and beginning the technical deconstruction of platform capitalism’s extractive kernel.',
+                    highlights: [
+                        'Opens Act I: The Architecture of Scarcity & The Cleanroom Genesis.',
+                        'Juxtaposes bare-metal independent infrastructure against extractive cloud monopolies.',
+                        'Lays the narrative and systems foundation for the full H.U.M.A.N. roadmap.'
+                    ]
+                },
+                {
+                    title: 'Labor Difficulty Multiplier (LDM)',
+                    subtitle: 'Mathematical Specification, Empirical Monte Carlo Validation, and Anti-Collusion Graph Topology',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 11, 2026',
+                    url: 'https://cwgermain.substack.com/p/labor-difficulty-multiplier-ldm',
+                    summary: 'Presents the formal protocol specification for the Labor Difficulty Multiplier (LDM)—a programmatic mechanism designed to invert market compensation failures by weighting physiological effort, hazard, and essential physical infrastructure maintenance.',
+                    highlights: [
+                        'Addresses the structural inversion where speculative arbitrage out-earns essential physical maintenance.',
+                        'Details mathematical specification and empirical Monte Carlo validation of LDM weighting.',
+                        'Incorporates anti-collusion graph topology to protect compensation routing from gaming.'
+                    ]
+                },
+                {
+                    title: 'H.U.M.A.N. Protocol & Ethical AI Initiative',
+                    subtitle: 'Official Manifesto Addendum: The Ecological Compute Covenant',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 9, 2026',
+                    url: 'https://cwgermain.substack.com/p/human-protocol-and-ethical-ai-initiative',
+                    summary: 'Formal addendum (AMENDMENT-ECO-COMPUTE-2026-V1) to the H.U.M.A.N. Protocol rejecting the false choice between advanced intelligence and ecological survival, countering hyperscale grid and water exhaustion with sustainable compute standards.',
+                    highlights: [
+                        'Integrates ecological compute constraints into the Technological Bill of Rights and Phase 4 roadmap.',
+                        'Critiques hyperscale data-center energy burn, water depletion, and local grid destabilization.',
+                        'Establishes environmental stewardship as a non-negotiable layer of ethical AI infrastructure.'
+                    ]
+                },
+                {
+                    title: 'The Architecture of Liberation',
+                    subtitle: 'The H.U.M.A.N. Initiative and Global Restructuring',
+                    category: 'H.U.M.A.N. Protocol',
+                    date: 'Nov 9, 2026',
+                    url: 'https://cwgermain.substack.com/p/the-architecture-of-liberation',
+                    summary: 'An overarching manifesto explaining why AI debates fail when they ignore ownership and revenue routing—introducing the Cleanroom Standard, C2PA cryptographic provenance, the 50% People’s Covenant top-line escrow, and the path to a Human Renaissance.',
+                    highlights: [
+                        'Defines the Cleanroom Standard: local-first execution, audited builds, licensed models, and C2PA provenance.',
+                        'Details the 50% People’s Covenant routing top-line gross software revenue into the Society Fund and creator micro-royalties.',
+                        'Outlines decentralized auditability and Sovereign Municipal Trusts to move civilization beyond survival mode.'
+                    ]
+                }
+            ];
+
+            var listEl = document.getElementById('substack-list');
+            var tagEl = document.getElementById('substack-reader-tag');
+            var dateEl = document.getElementById('substack-reader-date');
+            var titleEl = document.getElementById('substack-reader-title');
+            var subtitleEl = document.getElementById('substack-reader-subtitle');
+            var summaryEl = document.getElementById('substack-reader-summary');
+            var highlightsEl = document.getElementById('substack-reader-highlights');
+            var readBtn = document.getElementById('substack-read-btn');
+            var prevBtn = document.getElementById('substack-prev-btn');
+            var nextBtn = document.getElementById('substack-next-btn');
+            var counterEl = document.getElementById('substack-counter');
+            var filterBtns = document.querySelectorAll('.substack-filter-btn');
+
+            if (!listEl || !titleEl) return;
+
+            var activeCategory = 'All';
+            var filteredArticles = articles.slice();
+            var activeIndex = 0;
+
+            var renderReader = function () {
+                var item = filteredArticles[activeIndex];
+                if (!item) return;
+
+                tagEl.textContent = item.category.toUpperCase();
+                dateEl.textContent = item.date;
+                titleEl.textContent = item.title;
+                subtitleEl.textContent = item.subtitle;
+                summaryEl.textContent = item.summary;
+                readBtn.href = item.url;
+                counterEl.textContent = (activeIndex + 1) + ' / ' + filteredArticles.length;
+
+                while (highlightsEl.firstChild) {
+                    highlightsEl.removeChild(highlightsEl.firstChild);
+                }
+                item.highlights.forEach(function (point) {
+                    var li = document.createElement('li');
+                    li.textContent = point;
+                    highlightsEl.appendChild(li);
+                });
+
+                var items = listEl.querySelectorAll('.substack-item');
+                items.forEach(function (btn, idx) {
+                    var isActive = idx === activeIndex;
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+            };
+
+            var renderList = function () {
+                while (listEl.firstChild) {
+                    listEl.removeChild(listEl.firstChild);
+                }
+
+                filteredArticles.forEach(function (article, idx) {
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'substack-item' + (idx === activeIndex ? ' active' : '');
+                    btn.setAttribute('role', 'option');
+                    btn.setAttribute('aria-selected', idx === activeIndex ? 'true' : 'false');
+
+                    var meta = document.createElement('div');
+                    meta.className = 'substack-item-meta';
+
+                    var tag = document.createElement('span');
+                    tag.className = 'substack-item-tag';
+                    tag.textContent = article.category;
+
+                    var date = document.createElement('span');
+                    date.textContent = article.date;
+
+                    meta.appendChild(tag);
+                    meta.appendChild(date);
+
+                    var title = document.createElement('div');
+                    title.className = 'substack-item-title';
+                    title.textContent = article.title;
+
+                    btn.appendChild(meta);
+                    btn.appendChild(title);
+
+                    btn.addEventListener('click', function () {
+                        activeIndex = idx;
+                        renderReader();
+                    });
+
+                    listEl.appendChild(btn);
+                });
+
+                renderReader();
+            };
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    activeCategory = btn.getAttribute('data-category') || 'All';
+                    filterBtns.forEach(function (b) {
+                        var selected = b === btn;
+                        b.classList.toggle('active', selected);
+                        b.setAttribute('aria-selected', selected ? 'true' : 'false');
+                    });
+                    filteredArticles = activeCategory === 'All'
+                        ? articles.slice()
+                        : articles.filter(function (a) { return a.category === activeCategory; });
+                    activeIndex = 0;
+                    renderList();
+                });
+            });
+
+            prevBtn.addEventListener('click', function () {
+                activeIndex = (activeIndex - 1 + filteredArticles.length) % filteredArticles.length;
+                renderReader();
+            });
+
+            nextBtn.addEventListener('click', function () {
+                activeIndex = (activeIndex + 1) % filteredArticles.length;
+                renderReader();
+            });
+
+            renderList();
         })();
     </script>
 
