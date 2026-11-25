@@ -149,19 +149,20 @@
             color: var(--text-primary);
         }
 
-        hero {
+        section.hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 3rem;
-            min-height: 85vh;
-            padding-top: 70px;
+            min-height: clamp(480px, 72vh, 680px);
+            padding: 7rem 0 3.5rem;
+            border-top: none;
             position: relative;
         }
 
         .hero-content {
             max-width: 680px;
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
 
         .hero-brand-visual {
@@ -961,15 +962,16 @@
             .nav-links {
                 display: none;
             }
-            hero {
+            section.hero {
                 flex-direction: column-reverse;
-                justify-content: center;
-                padding-top: 90px;
-                gap: 2rem;
+                justify-content: flex-start;
+                min-height: auto;
+                padding: 96px 0 3rem;
+                gap: 1.75rem;
                 text-align: left;
             }
             .hero-content {
-                padding: 1rem 0 2.5rem;
+                padding: 0.5rem 0 1.5rem;
             }
             .hero-brand-visual img {
                 width: 220px;
@@ -998,7 +1000,7 @@
 
     <div class="container">
         <!-- Hero Section -->
-        <hero>
+        <section class="hero">
             <div class="hero-content">
                 <div class="badge-pill">// INDEPENDENT DIGITAL ECOSYSTEM</div>
                 <h1>Innovation, Code, and <span>Creative Execution</span>.</h1>
@@ -1009,9 +1011,9 @@
                 </div>
             </div>
             <div class="hero-brand-visual">
-                <img src="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg" alt="Rhythm Logic Multi Media Main Logo" referrerpolicy="no-referrer">
+                <img src="public/assets/aistudio/rhythm_logic_multi_media_logo_b3ec616c.jpg" alt="Rhythm Logic Multi Media Main Logo" width="300" height="300" referrerpolicy="no-referrer">
             </div>
-        </hero>
+        </section>
 
         <!-- Software Section -->
         <section id="software">
